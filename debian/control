@@ -1,0 +1,12 @@
+Source: phonecam-studio
+Section: utils
+Priority: optional
+Maintainer: Ahmed Al-Iraqi <ahmed@local>
+Build-Depends: debhelper-compat (= 13), cargo, rustc, libgtk-4-dev, libglib2.0-dev
+Standards-Version: 4.6.0
+
+Package: phonecam-studio
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, scrcpy, v4l2loopback-dkms, v4l-utils
+Description: Modern GTK4 GUI wrapper for scrcpy and v4l2loopback
+ A modern GTK4 GUI wrapper for scrcpy and v4l2loopback to use phone camera on Linux.
