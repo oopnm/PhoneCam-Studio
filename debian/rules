@@ -1,3 +1,15 @@
 #!/usr/bin/make -f
 %:
 	dh $@
+
+override_dh_auto_clean:
+
+override_dh_auto_build:
+	cargo build --release --locked
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	install -Dm755 target/release/phonecam-studio debian/phonecam-studio/usr/bin/phonecam-studio
+	install -Dm644 appimage/phonecam-studio.desktop debian/phonecam-studio/usr/share/applications/phonecam-studio.desktop
+	install -Dm644 appimage/phonecam-studio.png debian/phonecam-studio/usr/share/icons/hicolor/256x256/apps/phonecam-studio.png

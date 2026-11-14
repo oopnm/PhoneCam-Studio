@@ -1,0 +1,5 @@
+/target
+*.pkg.tar.zst
+*.AppImage
+*.deb
+*.rpm
